@@ -8,13 +8,16 @@
 //   glove_box_hole_horizontal
 //   pawl_hole_horizontal_offset
 
+// all values in mm
+// the "// 0.1" comments tell the customizer panel to let you enter n.n values even if the normal default value happens to be a whole number
+
 /* [Vehicle Site Reference Dimensions] */
 NOTES = "Install with the thick wall towards the rear of the vehicle.";
 glove_box_wall_thickness = 2;      // 0.1
 glove_box_hole_vertical = 13;      // 0.1
 glove_box_hole_horizontal = 13;    // 0.1
-pawl_vertical = 8;                 // 0.1
 pawl_horizontal = 8;               // 0.1
+pawl_vertical = 8;                 // 0.1
 
 /* [Parameters] */
 fitment_clearance = 0.1;           // 0.1
@@ -27,10 +30,10 @@ tip_undersize = 0.1;               // 0.1
 flange_thickness = 1.5;            // 0.1
 flange_overhang = 1;               // 0.1
 
-pawl_vertical_clearance = 1;       // 0.1
-pawl_horizontal_clearance = 0.5;   // 0.1
+pawl_clearance = 0.5;              // 0.1
 pawl_hole_horizontal_offset = 0.8; // 0.1
-pawl_hole_radius = 1;              // 0.1
+pawl_hole_vertical_min_wall = 1;   // 0.1
+pawl_hole_corner_radius = 1;       // 0.1
 
 
 fc = fitment_clearance;
@@ -42,9 +45,24 @@ retainer_width = insert_width + retainer_oversize*2;
 retainer_depth = insert_depth + retainer_oversize*2;
 flange_width = insert_width + flange_overhang*2;
 flange_depth = insert_depth + flange_overhang*2;
-hole_width = pawl_vertical + pawl_vertical_clearance*2;
-hole_depth = pawl_horizontal + pawl_horizontal_clearance*2;
+hole_width = insert_width - pawl_hole_vertical_min_wall*2;
+hole_depth = pawl_horizontal + pawl_clearance*2;
 z_offset = $preview ? -flange_thickness : 0 ;
+
+min_hole_width = pawl_vertical + pawl_clearance*2;
+assert(hole_width >= min_hole_width);
+// The hole width and depth come out almost the same, but they actually reference off of different things.
+//
+// The hole depth is the front-to-back size.
+// It's the horizontal size of the pawl plus 2 times the pawl horizontal clearance.
+// IE, it's as small as possible for the least door-rattle.
+//
+// The hole width is the top-to-bottom size.
+// It's the vertical size of the grommet trunk minus 2 times the pawl hole minimum wall thickness.
+// EI, it's as large as possible for the least chance of the side of the pawl hitting the side of the hole.
+//
+// In the case of the 2025 4Runner, the hole in the glove box and the shape of the pawl are both perfectly square,
+// so the hole ends up coming out close to square too. But other vehicles have other dimensions where the distiction may have more effect.
 
 /* [Hidden] */
 // arc smoothness
@@ -73,5 +91,13 @@ translate([0,0,z_offset]) difference() {
     }
   }
   // hole
-  translate([0,pawl_hole_horizontal_offset,tt/2]) rounded_cube(w=hole_width,d=hole_depth,h=tt+2,rh=pawl_hole_radius,rv=0);
+  translate([0,pawl_hole_horizontal_offset,tt/2]) rounded_cube(w=hole_width,d=hole_depth,h=tt+2,rh=pawl_hole_corner_radius,rv=0);
 }
+
+echo ();
+echo ("****************************************");
+echo ();
+echo (NOTES);
+echo ();
+echo ("****************************************");
+echo ();
