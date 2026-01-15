@@ -39,13 +39,13 @@ pawl_hole_corner_radius = 1;       // 0.1
 fc = fitment_clearance;
 cr = corner_radius;
 wall_thickness = glove_box_wall_thickness;
-insert_width = glove_box_hole_vertical - fc*2;
-insert_depth = glove_box_hole_horizontal - fc*2;
-retainer_width = insert_width + retainer_oversize*2;
-retainer_depth = insert_depth + retainer_oversize*2;
-flange_width = insert_width + flange_overhang*2;
-flange_depth = insert_depth + flange_overhang*2;
-hole_width = insert_width - pawl_hole_vertical_min_wall*2;
+trunk_width = glove_box_hole_vertical - fc*2;
+trunk_depth = glove_box_hole_horizontal - fc*2;
+retainer_width = trunk_width + retainer_oversize*2;
+retainer_depth = trunk_depth + retainer_oversize*2;
+flange_width = trunk_width + flange_overhang*2;
+flange_depth = trunk_depth + flange_overhang*2;
+hole_width = trunk_width - pawl_hole_vertical_min_wall*2;
 hole_depth = pawl_horizontal + pawl_clearance*2;
 z_offset = $preview ? -flange_thickness : 0 ;
 
@@ -83,11 +83,11 @@ translate([0,0,z_offset]) difference() {
       translate([0,0,flange_thickness*2]) cube([flange_width+1,flange_depth+1,flange_thickness*2],center=true); // cut away half
     }
     // trunk
-    translate([0,0,it/2+flange_thickness/2]) rounded_cube(w=insert_width,d=insert_depth,h=it,rh=cr,rv=0);
+    translate([0,0,it/2+flange_thickness/2]) rounded_cube(w=trunk_width,d=trunk_depth,h=it,rh=cr,rv=0);
     // retainer
     translate([0,0,flange_thickness+wall_thickness]) hull() {
       translate([0,0,qt]) rounded_cube(w=retainer_width,d=retainer_depth,h=qt*2,rh=cr+retainer_oversize,rv=qt); // big end
-      translate([0,0,qt*3]) rounded_cube(w=insert_width-tip_undersize*2,d=insert_depth-tip_undersize*2,h=qt*2,rh=cr+retainer_oversize,rv=qt); // small end
+      translate([0,0,qt*3]) rounded_cube(w=trunk_width-tip_undersize*2,d=trunk_depth-tip_undersize*2,h=qt*2,rh=cr+retainer_oversize,rv=qt); // small end
     }
   }
   // hole
