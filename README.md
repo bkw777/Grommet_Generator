@@ -6,7 +6,6 @@ The default values generate a gommet for the latches for the glove box door on a
 In the default case for the 5th gen 4Runner, install with the thick wall towards the rear of the vehicle.
 
 ![](glove_box_latch_grommet.png)
-![](glove_box_latch_grommet.2.png)
 ![](20260114_164219470.JPG)
 
 [STL for printing](out)
