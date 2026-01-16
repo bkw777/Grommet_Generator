@@ -10,6 +10,8 @@ In the default case for the 5th gen 4Runner, install with the thick wall towards
 
 [STL for printing](out)
 
+[Buy from JawsTec](https://app.jawstec.com/?share-cart=SDUyMEJtWVNZRHFtZ050djNTYUJ6Zz09)
+
 ## Customization
 (all values in mm)
 
