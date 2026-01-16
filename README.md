@@ -2,8 +2,8 @@
 
 Parametric latch grommet generator.
 
-The default values generate a gommet for the latches for the glove box door on a 5th gen (2025+) Toyota 4Runner.  
-In the default case for the 5th gen 4Runner, install with the thick wall towards the rear of the vehicle.
+The default values generate a gommet for the latches for the glove box door on a 6th gen (2025+) Toyota 4Runner.  
+In the default case for the 6th gen 4Runner, install with the thick wall towards the rear of the vehicle.
 
 ![](glove_box_latch_grommet.png)
 ![](20260114_164219470.JPG)
