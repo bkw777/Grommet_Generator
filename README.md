@@ -9,7 +9,7 @@ In the default case for the 6th gen 4Runner, install with the thick wall towards
 ![](20260114_164219470.JPG)
 
 [Buy from JawsTec](https://shop.jawstec.com/3d-printed-2025-4runner-glove-box-latch-grommet_p640.php)  
-(Select MJF Nylon material (not glass filled), Black color, no polishing. Order 2 per vehicle.)
+(Select: MJF Nylon (not glass filled), Black color, No polish, Quantity 2 per vehicle.)
 
 [STL for printing](out)
 
