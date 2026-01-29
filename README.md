@@ -8,9 +8,10 @@ In the default case for the 6th gen 4Runner, install with the thick wall towards
 ![](glove_box_latch_grommet.png)
 ![](20260114_164219470.JPG)
 
-[STL for printing](out)
+[Buy from JawsTec](https://shop.jawstec.com/3d-printed-2025-4runner-glove-box-latch-grommet_p640.php)  
+(Select MJF Nylon material (not glass filled), Black color, no polishing. Order 2 per vehicle.)
 
-[Buy from JawsTec](https://app.jawstec.com/?share-cart=SDUyMEJtWVNZRHFtZ050djNTYUJ6Zz09)
+[STL for printing](out)
 
 ## Customization
 (all values in mm)
@@ -36,4 +37,6 @@ To generate or customize this version, select the "Fancy Compliant SLS MJF" save
 The interesting parameters for this version are:  
 `retainer_slots_depth_percent` Anything greater than 0 enables the slots, and you want something between 50 to 100.  
 And since the slots make the insert compliant, `retainer_oversize` can be increased to make a more solid snap.  
+
 ![](fancy_compliant_sls_mjf.png)
+
