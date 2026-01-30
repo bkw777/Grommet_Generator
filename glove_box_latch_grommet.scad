@@ -13,7 +13,7 @@
 
 /* [Vehicle Site Reference Dimensions] */
 NOTES = "Install with the thick wall towards the door.";
-glove_box_wall_thickness = 2.5;    // 0.1
+glove_box_wall_thickness = 2.8;    // 0.1
 glove_box_hole_vertical = 13;      // 0.1
 glove_box_hole_horizontal = 13;    // 0.1
 pawl_horizontal = 8;               // 0.1
@@ -27,7 +27,7 @@ retainer_thickness = 2;            // 0.1
 retainer_oversize = 0.1;           // 0.01
 tip_undersize = 0.2;               // 0.1
 retainer_ramp_percent = 66;        // [25:100]
-retainer_slots_width = 1;          // 0.1
+retainer_slots_width = 2;          // 0.1
 retainer_slots_depth_percent = 0;  // [0:100]
 
 flange_thickness = 1.2;            // 0.1
