@@ -6,7 +6,7 @@ The default values generate a gommet for the latches for the glove box door on a
 In the default case for the 6th gen 4Runner, install with the thick wall towards the rear of the vehicle.
 
 ![](glove_box_latch_grommet.png)
-![](20260114_164219470.JPG)
+![](installed.jpg)
 
 [Buy from JawsTec](https://shop.jawstec.com/3d-printed-2025-4runner-glove-box-latch-grommet_p640.php)  
 (Select: MJF Nylon (not glass filled), Black color, No polish, Quantity 2 per vehicle.)
